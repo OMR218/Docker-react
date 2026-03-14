@@ -13,7 +13,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 script {
-                    env.DOCKER_BUILDIT = 1
+                    env.DOCKER_BUILDKIT = 1
                     sh 'docker run -e CI=true omr21/docker-react npm test'
                 }
             }
